@@ -244,15 +244,17 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
   55%{transform:translateX(-50%) scaleY(1);transform-origin:bottom}
   100%{transform:translateX(-50%) scaleY(0);transform-origin:bottom}}
 
-/* three portrait cards — the mobile reveal.
-   A 16:9 plate on a 9:19.5 screen only ever shows one face, so on phones
-   the wide plate stays as texture and these three carry the reveal. */
-.hero-mtrio{display:none}
-
+/* On phones the plate becomes a band showing the THREE of them whole.
+   aspect-ratio 1.35 + cover trims only the empty margins at the sides —
+   the trio spans the middle 72% of the frame, so nobody gets cut. */
 @media(max-width:760px){
-  .hero{height:190vh}
-  .hero-media img{object-position:50% 22%;opacity:.16}
-  .hero-veil{background:radial-gradient(120% 66% at 50% 40%,rgba(1,8,24,.5) 0%,rgba(1,8,24,.84) 68%,rgba(1,8,24,.96) 100%)}
+  .hero{height:200vh}
+  .hero-media{display:grid;place-items:center;padding-bottom:0}
+  .hero-media img{width:100%;height:auto;aspect-ratio:1.35;
+    object-fit:cover;object-position:50% 50%;opacity:.96}
+  .hero-media::after{display:none}
+  .hero-veil{background:linear-gradient(180deg,var(--void) 0%,rgba(1,8,24,.72) 18%,
+    rgba(1,8,24,.66) 50%,rgba(1,8,24,.82) 82%,var(--void) 100%)}
   .hero-h{font-size:clamp(27px,7.1vw,44px);letter-spacing:-.03em}
   .hero-sub{font-size:15px}
   .hero-cta{flex-direction:column;align-items:stretch;width:100%}
@@ -261,18 +263,8 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
   .hero-strip .inner{gap:9px;padding-block:14px;font-size:10px;letter-spacing:.1em}
   .hero-strip .dot{display:none}
   .hero-copy{transform-origin:50% 30%}
-
-  .hero-mtrio{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;
-    position:absolute;left:var(--gut);right:var(--gut);bottom:104px;z-index:5;
-    opacity:0;will-change:opacity,transform;pointer-events:none}
-  .hero-mtrio figure{margin:0}
-  .hero-mtrio img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 14%;
-    border-radius:3px;border:1px solid rgba(235,191,140,.22);
-    box-shadow:0 22px 50px -26px rgba(0,0,0,.95)}
-  .hero-mtrio figcaption{font-family:var(--f-display);font-size:9px;font-weight:400;
-    letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);
-    margin-top:9px;text-align:center;line-height:1.35}
-  .hero-names{display:none}
+  .hero-names{top:calc(50% + 156px);bottom:auto}
+  .hero-names span{gap:6px 18px;font-size:9.5px;letter-spacing:.13em}
 }
 
 /* ============================================================
@@ -413,7 +405,7 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
 /* ============================================================
    APP
    ============================================================ */
-.app{background:var(--void);overflow:hidden}
+.app{background:var(--void);overflow:clip}   /* clip, not hidden — keeps sticky alive */
 .app .appbg{position:absolute;inset:0;z-index:0}
 .app .appbg img{width:100%;height:100%;object-fit:cover;opacity:.5;transform:scale(1.12);will-change:transform}
 .app::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
@@ -454,6 +446,55 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
   86%,100%{transform:translateY(120%);opacity:0}}
 .ui-toast .d{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
 .ui-toast span{font-size:8.6px;color:#fff;font-family:var(--f-display);letter-spacing:.02em;line-height:1.35}
+/* mobile: the section pins and the moments slide sideways */
+.app-scroll{padding-block:clamp(90px,13vh,180px);position:relative;z-index:2}
+.app-track,.app-bar{display:none}
+@media(max-width:760px){
+  .app-scroll{height:300vh;padding:0}
+  .app-stage{position:sticky;top:0;height:100vh;overflow:clip;z-index:2;
+    display:flex;flex-direction:column;justify-content:center;gap:14px;padding-top:62px}
+  .app-split{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .app-copy{order:-1;text-align:center}
+  .app-copy .eyebrow{justify-content:center}
+  .app-copy .eyebrow::after{content:'';width:26px;height:1px;
+    background:linear-gradient(270deg,transparent,var(--gold))}
+  .app-copy .d2{font-size:21px;max-width:19ch;margin:14px auto 0!important;line-height:1.14}
+  .app-copy p,.app-copy .stores{display:none}
+  .phone{width:116px;transform:none!important;box-shadow:0 30px 60px -32px rgba(0,0,0,.95),
+    0 0 0 1px rgba(235,191,140,.22);border-radius:26px;padding:6px}
+  .phone-wrap{perspective:none}
+  .phone-screen{border-radius:21px}
+  .notch{height:13px;top:6px;border-radius:0 0 9px 9px}
+  .ui{padding:20px 8px 10px;gap:5px}
+  .ui-top .logo{font-size:11px}
+  .ui-top .logo-sub{font-size:3.6px}
+  .ui-pill{font-size:6px;padding:3px 5px}
+  .ui-hero{height:29%;border-radius:7px;padding:8px}
+  .ui-hero span{font-size:7px}
+  .ui-tile{height:30px}
+  .ui-line{height:6px}
+  .ui-toast{padding:7px 8px;border-radius:7px}
+  .ui-toast span{font-size:6.4px}
+
+  .app-track{display:flex;align-items:stretch;gap:11px;padding-left:var(--gut);
+    will-change:transform}
+  .acard{flex:none;width:72vw;max-width:290px;border-radius:5px;padding:18px;
+    border:1px solid var(--line-soft);
+    background:linear-gradient(165deg,rgba(11,36,71,.82),rgba(4,13,30,.94))}
+  .acard .n{font-family:var(--f-display);font-size:10px;font-weight:400;
+    letter-spacing:.22em;color:var(--gold)}
+  .acard h3{font-size:18px;font-weight:300;margin:8px 0 7px;line-height:1.15}
+  .acard p{margin:0;font-size:13.4px;line-height:1.55;color:var(--ink-2);font-weight:300}
+  .acard .stores{display:flex;margin-top:13px;gap:7px;flex-direction:row}
+  .acard .store{padding:7px 9px;gap:7px;flex:1}
+  .acard .store svg{width:15px;height:15px}
+  .acard .store .txt b{font-size:11px}
+  .acard .store .txt i{font-size:7px;letter-spacing:.1em}
+  .app-bar{display:block;height:1px;background:var(--line-soft);
+    position:relative;margin:4px var(--gut) 0}
+  .app-bar i{position:absolute;left:0;top:-1px;height:3px;width:19%;background:var(--gold);
+    transform-origin:left;border-radius:2px;box-shadow:0 0 18px rgba(235,191,140,.6)}
+}
 .stores{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
 .store{display:inline-flex;align-items:center;gap:11px;padding:11px 20px;border-radius:10px;
   border:1px solid var(--line-soft);background:rgba(255,255,255,.03);transition:border-color .5s var(--ease),background .5s var(--ease)}
@@ -588,6 +629,16 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
 .close .foot-strip{margin-top:44px;display:flex;justify-content:center;gap:clamp(14px,2.6vw,34px);
   flex-wrap:wrap;font-family:var(--f-display);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
   color:var(--muted)}
+/* on phones the closing plate also becomes a whole-trio band, sitting under the CTA */
+@media(max-width:760px){
+  .close{padding-bottom:0}
+  .close .bgimg{inset:auto 0 0 0;height:auto;display:grid;place-items:end center}
+  .close .bgimg img{width:100%;height:auto;aspect-ratio:1.35;object-fit:cover;
+    object-position:50% 50%;opacity:.5;transform:none!important}
+  .close::after{background:linear-gradient(180deg,var(--void) 0%,rgba(1,8,24,.6) 46%,
+    rgba(1,8,24,.35) 72%,rgba(1,8,24,.9) 100%)}
+  .close .wrap{padding-bottom:calc(100vw / 1.35 + 30px)}
+}
 
 /* ============================================================
    FOOTER
@@ -651,12 +702,6 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
 
     <div class="hero-names" id="heroNames">
       <span><b>Dr. André Braz</b><b>Dra. Bruna Bravo</b><b>Dr. Daniel Coimbra</b></span>
-    </div>
-
-    <div class="hero-mtrio" id="heroMtrio">
-      <figure><img src="dr-braz.webp" alt="Dr. André Braz"><figcaption>Dr. André<br>Braz</figcaption></figure>
-      <figure><img src="dr-bravo.webp" alt="Dra. Bruna Bravo"><figcaption>Dra. Bruna<br>Bravo</figcaption></figure>
-      <figure><img src="dr-coimbra.webp" alt="Dr. Daniel Coimbra"><figcaption>Dr. Daniel<br>Coimbra</figcaption></figure>
     </div>
 
     <div class="scroll-hint"></div>
@@ -867,10 +912,12 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
 </section>
 
 <!-- ================= APP ================= -->
-<section class="app pad" id="app">
+<section class="app" id="app">
   <div class="appbg"><img src="appbg.webp" alt="" id="appBg"></div>
+  <div class="app-scroll" id="appScroll">
+  <div class="app-stage">
   <div class="wrap">
-    <div class="split" style="grid-template-columns:.95fr 1.05fr">
+    <div class="split app-split" style="grid-template-columns:.95fr 1.05fr">
       <div class="phone-wrap" data-anim="scale">
         <div class="phone" id="phone">
           <div class="phone-screen">
@@ -893,7 +940,7 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
           </div>
         </div>
       </div>
-      <div>
+      <div class="app-copy">
         <span class="eyebrow" data-anim="fade">Aplicativo</span>
         <h2 class="d2" data-anim style="--d:80ms;margin-top:20px;max-width:17ch">
           A plataforma acompanha você, do consultório à sua casa
@@ -917,6 +964,43 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="app-track" id="appTrack">
+    <article class="acard">
+      <span class="n">01</span>
+      <h3>No consultório</h3>
+      <p>Antes de um procedimento, você revê uma etapa no celular.</p>
+    </article>
+    <article class="acard">
+      <span class="n">02</span>
+      <h3>Entre um paciente<br>e outro</h3>
+      <p>Retoma uma técnica em minutos, sem sair da sala.</p>
+    </article>
+    <article class="acard">
+      <span class="n">03</span>
+      <h3>Em casa</h3>
+      <p>Ao fim do dia, aprofunda com calma. O mesmo acervo, onde quer que você esteja.</p>
+    </article>
+    <article class="acard">
+      <span class="n">04</span>
+      <h3>No instante em<br>que entra no ar</h3>
+      <p>O aplicativo avisa quando uma aula inédita é publicada ou um encontro ao vivo começa.</p>
+      <div class="stores">
+        <a class="store" href="#planos">
+          <svg viewBox="0 0 24 24"><path d="M17.05 12.54c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.79-.41 6.92 1.16 9.19.77 1.11 1.68 2.35 2.88 2.31 1.16-.05 1.6-.75 3-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.24.88-1.28 1.24-2.52 1.26-2.59-.03-.01-2.42-.93-2.44-3.69M14.9 5.3c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.02.08 2.07-.52 2.71-1.28"/></svg>
+          <span class="txt"><i>Baixar na</i><b>App Store</b></span>
+        </a>
+        <a class="store" href="#planos">
+          <svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.6 2.3M16.2 15 13 11.8v-.2L16.2 8.4l.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3L16.3 15M15.4 15.8 12.1 12.5 3.6 21.7c.4.4 1 .4 1.7 0l10.1-5.9M15.4 8.2 5.3 2.3c-.7-.4-1.3-.3-1.7.1l8.5 9.1 3.3-3.3"/></svg>
+          <span class="txt"><i>Disponível no</i><b>Google Play</b></span>
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="app-bar"><i id="appBarFill"></i></div>
+  </div>
   </div>
 </section>
 
@@ -1076,7 +1160,6 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
 <section class="close">
   <div class="bgimg"><img src="hero-trio.webp" alt="" id="closeImg"></div>
   <div class="wrap">
-    <span class="eyebrow" data-anim="fade" style="margin-bottom:24px">Fechamento</span>
     <h2 class="d1" data-anim style="--d:80ms">A alta cosmiatria abriu suas portas.<br><span class="gold">Falta você entrar.</span></h2>
     <p class="lead" data-anim style="--d:180ms">
       As técnicas, a conduta e os casos de André Braz, Bruna Bravo e Daniel Coimbra,
@@ -1137,8 +1220,9 @@ function ease(key,to){
 const nav=document.getElementById('nav'), prog=document.getElementById('prog');
 const heroMedia=document.getElementById('heroMedia'), heroCopy=document.getElementById('heroCopy');
 const heroVeil=document.getElementById('heroVeil'), heroNames=document.getElementById('heroNames'),
-      heroMtrio=document.getElementById('heroMtrio'),
       scrollHint=document.querySelector('.scroll-hint');
+const appScroll=document.getElementById('appScroll'), appTrack=document.getElementById('appTrack'),
+      appBarFill=document.getElementById('appBarFill');
 const hscroll=document.getElementById('hscroll'), htrack=document.getElementById('htrack'), hbar=document.getElementById('hbarfill');
 const slist=document.getElementById('slist'), srail=document.getElementById('srailfill');
 const phone=document.getElementById('phone'), liveImg=document.getElementById('liveImg'), closeImg=document.getElementById('closeImg');
@@ -1195,13 +1279,14 @@ function render(){
       heroNames.style.transform = 'translate3d(0,'+((1-np)*26)+'px,0)';
     }
     if(scrollHint) scrollHint.style.opacity = clamp(0.5-p*1.6,0,1).toFixed(3);
+  }
 
-    // mobile: the three portraits rise in place of the wide plate
-    const mp = clamp((p-0.52)/0.34,0,1);
-    if(heroMtrio){
-      heroMtrio.style.opacity = mp.toFixed(3);
-      heroMtrio.style.transform = 'translate3d(0,'+((1-mp)*40)+'px,0)';
-    }
+  /* APP horizontal scrub — only wired up while the mobile layout is active */
+  if(appScroll && appTrack && getComputedStyle(appTrack).display !== 'none'){
+    const p = ease('app', progressOf(appScroll));
+    const max = Math.max(appTrack.scrollWidth - innerWidth + 40, 0);
+    appTrack.style.transform = 'translate3d('+(-p*max)+'px,0,0)';
+    if(appBarFill) appBarFill.style.transform = 'translateX('+(p*426)+'%)';
   }
 
   /* ACERVO horizontal scrub */
