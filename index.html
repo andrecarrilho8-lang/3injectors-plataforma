@@ -248,10 +248,13 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
    aspect-ratio 1.35 + cover trims only the empty margins at the sides —
    the trio spans the middle 72% of the frame, so nobody gets cut. */
 @media(max-width:760px){
+  :root{--gut:30px}
   .hero{height:200vh}
   .hero-media{display:grid;place-items:center;padding-bottom:0}
-  .hero-media img{width:100%;height:auto;aspect-ratio:1.35;
-    object-fit:cover;object-position:50% 50%;opacity:.96}
+  /* hero-trio-m.webp is pre-cropped to the trio's bounding box — no dead
+     headroom, no empty margins, so the frame is all three of them */
+  .hero-media img{width:100%;height:auto;aspect-ratio:1.49;
+    object-fit:cover;object-position:50% 50%;opacity:.97}
   .hero-media::after{display:none}
   .hero-veil{background:linear-gradient(180deg,var(--void) 0%,rgba(1,8,24,.72) 18%,
     rgba(1,8,24,.66) 50%,rgba(1,8,24,.82) 82%,var(--void) 100%)}
@@ -263,7 +266,7 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
   .hero-strip .inner{gap:9px;padding-block:14px;font-size:10px;letter-spacing:.1em}
   .hero-strip .dot{display:none}
   .hero-copy{transform-origin:50% 30%}
-  .hero-names{top:calc(50% + 156px);bottom:auto}
+  .hero-names{top:calc(50% + 146px);bottom:auto}
   .hero-names span{gap:6px 18px;font-size:9.5px;letter-spacing:.13em}
 }
 
@@ -633,11 +636,11 @@ em.serif{font-style:italic;font-family:var(--f-display);font-weight:200}
 @media(max-width:760px){
   .close{padding-bottom:0}
   .close .bgimg{inset:auto 0 0 0;height:auto;display:grid;place-items:end center}
-  .close .bgimg img{width:100%;height:auto;aspect-ratio:1.35;object-fit:cover;
-    object-position:50% 50%;opacity:.5;transform:none!important}
+  .close .bgimg img{width:100%;height:auto;aspect-ratio:1.49;object-fit:cover;
+    object-position:50% 50%;opacity:.52;transform:none!important}
   .close::after{background:linear-gradient(180deg,var(--void) 0%,rgba(1,8,24,.6) 46%,
     rgba(1,8,24,.35) 72%,rgba(1,8,24,.9) 100%)}
-  .close .wrap{padding-bottom:calc(100vw / 1.35 + 30px)}
+  .close .wrap{padding-bottom:calc(100vw / 1.49 + 30px)}
 }
 
 /* ============================================================
@@ -676,7 +679,10 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
 <section class="hero" id="top">
   <div class="hero-stage">
     <div class="hero-media" id="heroMedia">
-      <img src="hero-trio.webp" alt="Dr. André Braz, Dra. Bruna Bravo e Dr. Daniel Coimbra">
+      <picture>
+        <source media="(max-width:760px)" srcset="hero-trio-m.webp">
+        <img src="hero-trio.webp" alt="Dr. André Braz, Dra. Bruna Bravo e Dr. Daniel Coimbra">
+      </picture>
     </div>
     <div class="hero-veil" id="heroVeil"></div>
     <div class="beam b1"></div>
@@ -1158,7 +1164,10 @@ footer{background:var(--void);border-top:1px solid var(--line-soft);padding-bloc
 
 <!-- ================= FECHAMENTO ================= -->
 <section class="close">
-  <div class="bgimg"><img src="hero-trio.webp" alt="" id="closeImg"></div>
+  <div class="bgimg"><picture>
+    <source media="(max-width:760px)" srcset="hero-trio-m.webp">
+    <img src="hero-trio.webp" alt="" id="closeImg">
+  </picture></div>
   <div class="wrap">
     <h2 class="d1" data-anim style="--d:80ms">A alta cosmiatria abriu suas portas.<br><span class="gold">Falta você entrar.</span></h2>
     <p class="lead" data-anim style="--d:180ms">
