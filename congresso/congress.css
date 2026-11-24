@@ -525,7 +525,6 @@ p,li,.lead,.prose p,.pbody p,.mbody p{text-wrap:pretty}
   .mbar-txt b{font-family:var(--f-display);font-weight:400;font-size:17px;color:#fff}
   .mbar-txt span{font-size:11px;color:var(--gold);letter-spacing:.04em}
   .mbar .btn{padding:12px 20px;font-size:13.5px}
-  footer{padding-bottom:110px}
 
   /* "por que ao vivo": colunas de fotos mais altas e sempre visíveis */
   .vmq{height:520px;margin-top:28px}
