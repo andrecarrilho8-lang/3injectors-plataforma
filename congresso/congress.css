@@ -538,3 +538,36 @@ p,li,.lead,.prose p,.pbody p,.mbody p{text-wrap:pretty}
   .d2{font-size:clamp(32px,8.6vw,40px)}
   .sec-head{margin-bottom:36px}
 }
+
+/* celular: texto do hero sempre legível + margens de 30px */
+@media(max-width:760px){
+  :root{--gut:30px}
+  .mosaic-hero .hero-copy{padding-inline:30px;bottom:96px}
+  .mosaic-hero .hero-copy::before{display:block;content:'';position:absolute;z-index:-1;left:0;right:0;
+    top:-110px;bottom:-200px;filter:none;
+    background:linear-gradient(180deg,rgba(1,8,24,0) 0%,rgba(1,8,24,.86) 110px,rgba(1,8,24,.96) 200px,var(--void) 100%)}
+  .mosaic-hero .hero-veil{background:linear-gradient(180deg,rgba(1,8,24,.55) 0%,rgba(1,8,24,.12) 12%,rgba(1,8,24,.25) 30%,rgba(1,8,24,.6) 100%)}
+  .mosaic-hero .hero-h{font-size:clamp(34px,9.6vw,42px);text-shadow:0 2px 24px rgba(1,8,24,.8)}
+  .mosaic-hero .hero-sub{font-size:14.5px;color:#d7deea}
+  .mosaic-hero .hero-sub strong{color:#fff}
+  .nav{padding-inline:30px}
+}
+
+@media(max-width:760px){.mosaic-hero .hero-h .l span{text-wrap:balance}}
+
+/* celular: dobra dos três mais elegante (nomes como legenda embaixo de cada um) */
+@media(max-width:760px){
+  .trio-stage{padding:56px 0 64px}
+  .trio-head{padding-bottom:20px}
+  .trio-media{aspect-ratio:1120/751;margin-inline:0}
+  .trio-shade{background:linear-gradient(180deg,var(--void) 0%,rgba(1,8,24,0) 18%,rgba(1,8,24,0) 62%,rgba(1,8,24,.85) 88%,var(--void) 100%)}
+  .trio-names{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:-38px;padding:0 14px;position:relative;z-index:4}
+  .tn{text-align:center;white-space:normal}
+  .tn b{font-size:16.5px;line-height:1.18;font-weight:300;letter-spacing:-.01em}
+  .tn b i{display:block;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;margin-bottom:5px}
+  .tn::after{width:34px;margin-top:12px}
+  .trio-line{margin:40px 30px 0;padding:26px 0 0;border-top:1px solid var(--line-soft);
+    font-size:25px;line-height:1.22;text-align:left;max-width:none}
+}
+
+@media(max-width:760px){.tn b{max-width:7.6ch;margin-inline:auto}}
