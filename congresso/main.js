@@ -19,6 +19,8 @@ const mosaic=$('mosaic'), mrows=[...document.querySelectorAll('.mrow')];
 const trioSec=$('trio'), trioMedia=$('trioMedia'), trioSweep=$('trioSweep'), trioLine=$('trioLine'), trioHead=$('trioHead');
 const tns=[...document.querySelectorAll('.tn')];
 const mobile=()=>innerWidth<=760;
+const mbar=$('mbar');
+if(mobile()){ const hs=document.querySelector('.hero-strip .inner'); if(hs) hs.innerHTML+='<span class="dot"></span>'+hs.innerHTML+'<span class="dot"></span>'; }
 /* posiciona cada nome embaixo da pessoa, respeitando o recorte do object-fit:cover */
 function placeNames(){
   if(!trioSec) return;
@@ -60,7 +62,7 @@ function render(){
   nav.classList.toggle('stuck', y>40);
   prog.style.transform='scaleX('+clamp(y/Math.max(docH-innerHeight,1),0,1)+')';
 
-  if(heroSec){
+  if(heroSec && !mobile()){
     const p=ease('hero',progressOf(heroSec)), e=p*p;
     if(mosaic){
       mosaic.style.transform='scale('+(1.08-p*0.08)+')';
@@ -96,6 +98,7 @@ function render(){
     const lq=clamp((p-0.66)/0.16,0,1);
     trioLine.style.opacity=lq.toFixed(3); trioLine.style.transform='translate3d(0,'+((1-lq)*20)+'px,0)';
   }
+  if(mbar){ const ins=$('inscricao').getBoundingClientRect(); mbar.classList.toggle('on', mobile() && y>innerHeight*0.9 && !(ins.top<innerHeight && ins.bottom>0)); }
   if(slist && srail){
     const r=slist.getBoundingClientRect();
     const p=ease('rail',clamp((innerHeight*0.72-r.top)/r.height,0,1));
