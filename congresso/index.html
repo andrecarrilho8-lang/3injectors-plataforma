@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<base href="/congresso/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>3Injectors Congress 2027 · 11 e 12 de junho · São Paulo</title>
+<meta name="description" content="Dois dias de injeção ao vivo com Dr. André Braz, Dra. Bruna Bravo e Dr. Daniel Coimbra. Mais de 30 procedimentos e 650 vagas. Inscrições abertas. Evento presencial e exclusivo para médicos.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3Injectors Congress">
+<meta property="og:title" content="3Injectors Congress 2027 · O maior evento de injeção ao vivo do Brasil">
+<meta property="og:description" content="11 e 12 de junho de 2027, em São Paulo. Mais de 30 procedimentos ao vivo e 650 vagas. Inscrições abertas.">
+<meta property="og:image" content="https://3injectors-plataforma.vercel.app/congresso/img/hero.webp">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#010818">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23010818'/%3E%3Ctext x='32' y='45' font-family='Poppins,Century Gothic,sans-serif' font-size='42' font-weight='300' fill='%23EBBF8C' text-anchor='middle'%3E3%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="congress.css">
+</head>
+<body>
+<div class="grain"></div>
+<div class="vig"></div>
+<div class="prog" id="prog"></div>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <a href="#top" class="logo-stack" aria-label="3Injectors Congress">
+    <span class="logo"><i>3</i>injectors</span>
+    <span class="logo-sub">congress</span>
+  </a>
+  <div class="nav-r">
+    <span class="nav-tag">11 e 12 de Junho de 2027</span>
+    <a href="#inscricao" class="btn">Inscreva-se</a>
+  </div>
+</nav>
+
+<div id="viewport"><div id="content">
+
+<!-- ================= HERO ================= -->
+<section class="hero mosaic-hero" id="top">
+  <div class="hero-stage">
+    <div class="mosaic" id="mosaic">
+      <div class="mrow" data-dir="1"><div class="tile" style="--a:1.5"><img src="img/tiles/mq-8.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-183.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-4.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-163.webp" alt=""></div><div class="tile" style="--a:0.67"><img src="img/tiles/mq-3.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d2-166.webp" alt=""></div><div class="tile" style="--a:0.75"><img src="img/tiles/host-bravo.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-2.webp" alt=""></div></div>
+      <div class="mrow" data-dir="-1"><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-214.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/pill-1.webp" alt=""></div><div class="tile" style="--a:0.75"><img src="img/tiles/host-coimbra.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/hero.webp" alt=""></div><div class="tile" style="--a:0.67"><img src="img/tiles/mq-11.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-330.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-5.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-232.webp" alt=""></div></div>
+      <div class="mrow" data-dir="1"><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d2-131.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-6.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d2-252.webp" alt=""></div><div class="tile" style="--a:0.75"><img src="img/tiles/host-braz.webp" alt=""></div><div class="tile" style="--a:0.67"><img src="img/tiles/insc-trio.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-7.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/pill-3.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-319.webp" alt=""></div></div>
+      <div class="mrow" data-dir="-1"><div class="tile" style="--a:1.5"><img src="img/tiles/bg-plateia.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-10.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/live-bravo.webp" alt=""></div><div class="tile" style="--a:0.67"><img src="img/tiles/mq-9.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d2-274.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-1.webp" alt=""></div><div class="tile" style="--a:0.67"><img src="img/tiles/pill-2.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-169.webp" alt=""></div></div>
+      <div class="mrow mob" data-dir="1"><div class="tile" style="--a:1.5"><img src="img/tiles/mq-5.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d1-330.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/hero.webp" alt=""></div><div class="tile" style="--a:0.75"><img src="img/tiles/host-bravo.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/ed-d2-166.webp" alt=""></div><div class="tile" style="--a:1.5"><img src="img/tiles/mq-2.webp" alt=""></div></div>
+    </div>
+    <div class="hero-veil" id="heroVeil"></div>
+
+    <div class="hero-copy" id="heroCopy">
+      <h1 class="hero-h">
+        <span class="l"><span style="--d:120ms">O maior evento de injeção</span></span>
+        <span class="l"><span style="--d:220ms">ao vivo do Brasil</span></span>
+        <span class="l"><span style="--d:340ms" class="gold">acontece em junho.</span></span>
+      </h1>
+      <p class="hero-sub" data-anim="fade" style="--d:640ms">
+        Durante dois dias, o Dr.&nbsp;André&nbsp;Braz, a Dra.&nbsp;Bruna&nbsp;Bravo e o Dr.&nbsp;Daniel&nbsp;Coimbra executam
+        <strong>mais de 30 procedimentos ao vivo</strong>. Você acompanha <strong>a técnica, cada decisão clínica
+        e os ajustes</strong> que eles fazem durante a aplicação.
+      </p>
+      <div class="btn-row hero-cta" data-anim="fade" style="--d:780ms">
+        <a href="#inscricao" class="btn lg">Quero garantir minha vaga</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint"></div>
+
+    <div class="hero-strip">
+      <div class="inner">
+        <span>Mais de 30 procedimentos ao vivo</span><span class="dot"></span>
+        <span>650 vagas nesta edição</span><span class="dot"></span>
+        <span>Mais de 3 mil médicos nas edições anteriores</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OS TRÊS ================= -->
+<section class="trio" id="trio">
+  <div class="trio-stage">
+    <div class="trio-media" id="trioMedia">
+      <picture>
+        <source media="(max-width:760px)" srcset="img/hero-trio-m.webp">
+        <img src="img/hero-trio.webp" alt="Dr.&nbsp;André&nbsp;Braz, Dra.&nbsp;Bruna&nbsp;Bravo e Dr.&nbsp;Daniel&nbsp;Coimbra">
+      </picture>
+    </div>
+    <div class="trio-sweep" id="trioSweep"></div>
+    <div class="trio-shade" id="trioShade"></div>
+
+    <div class="trio-head" id="trioHead">
+      <span class="eyebrow">Seus anfitriões</span>
+    </div>
+
+    <div class="trio-names" id="trioNames">
+      <div class="tn" data-x=".30" data-y=".60"><b><i>Dr.</i>&nbsp;André Braz</b></div>
+      <div class="tn" data-x=".49" data-y=".70"><b><i>Dra.</i>&nbsp;Bruna Bravo</b></div>
+      <div class="tn" data-x=".70" data-y=".60"><b><i>Dr.</i>&nbsp;Daniel Coimbra</b></div>
+    </div>
+
+    <p class="trio-line" id="trioLine">Os três recebem em São Paulo os médicos que levam injetáveis <span class="gold">a sério.</span></p>
+  </div>
+</section>
+
+<!-- ================= O PROBLEMA ================= -->
+<section class="live pad">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow" data-anim="fade">Por que ao vivo</span>
+        <h2 class="d2" data-anim style="--d:80ms;margin-top:20px;max-width:15ch">
+          A forma como você aprende injetáveis <span class="gold">precisa mudar.</span>
+        </h2>
+        <div class="prose" data-anim style="--d:170ms;margin-top:28px">
+          <p>A maioria dos congressos entrega <strong>teoria</strong>: slides e apresentações sobre o que funciona.</p>
+          <p>O problema aparece <strong>quando você volta para o consultório</strong>. A mão ainda treme em certas regiões. Na hora de escolher entre uma técnica e outra, vem a dúvida. E o resultado nem sempre sai como você imaginou.</p>
+        </div>
+        <p class="bridge" data-anim style="--d:260ms">A distância entre <strong>saber o que fazer</strong> e <strong>ver alguém fazendo</strong> é o que separa um congresso comum do 3Injectors.</p>
+      </div>
+      <div class="vmq" data-anim="scale" style="--d:120ms" aria-label="Fotos da última edição">
+        <div class="vcol"><div class="vtrack"><img src="img/tiles/mq-4.webp" alt="" loading="lazy"><img src="img/tiles/live-bravo.webp" alt="" loading="lazy"><img src="img/tiles/ed-d1-183.webp" alt="" loading="lazy"><img src="img/tiles/mq-5.webp" alt="" loading="lazy"><img src="img/tiles/pill-1.webp" alt="" loading="lazy"><img src="img/tiles/ed-d1-330.webp" alt="" loading="lazy"><img src="img/tiles/host-braz.webp" alt="" loading="lazy"></div></div>
+        <div class="vcol rev"><div class="vtrack"><img src="img/tiles/mq-3.webp" alt="" loading="lazy"><img src="img/tiles/ed-d2-166.webp" alt="" loading="lazy"><img src="img/tiles/mq-2.webp" alt="" loading="lazy"><img src="img/tiles/mq-11.webp" alt="" loading="lazy"><img src="img/tiles/pill-3.webp" alt="" loading="lazy"><img src="img/tiles/mq-6.webp" alt="" loading="lazy"><img src="img/tiles/host-coimbra.webp" alt="" loading="lazy"></div></div>
+        <div class="live-badge"><span class="pulse"></span>Última edição, ao vivo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOIS JEITOS ================= -->
+<section class="ways-sec pad">
+  <div class="secbg faint"><img src="img/ed-d1-232.webp" alt="" class="px"></div>
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;justify-items:center">
+      <span class="eyebrow" data-anim="fade">Dois jeitos de aprender</span>
+      <h2 class="d2" data-anim style="--d:80ms;max-width:22ch">Existe uma distância grande entre <span class="muted-w">saber o que fazer</span> e <span class="gold">ver alguém fazendo.</span></h2>
+    </div>
+    <div class="wgrid">
+      <div class="wcard off" data-anim="left">
+        <div class="wtop">
+          <span class="ic"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span>
+          <span class="wlbl">O que a maioria entrega</span>
+        </div>
+        <h3>Saber o que fazer</h3>
+        <ul class="wstrike"><li>Slides</li><li>Artigos</li><li>Vídeos editados</li><li>Teoria isolada</li></ul>
+        <p>Quando você volta para o consultório, <strong>a dúvida aparece na hora de aplicar.</strong></p>
+      </div>
+      <div class="wcard on" data-anim="right" style="--d:120ms">
+        <div class="wfig"><img src="img/ed-d1-183.webp" alt="Procedimento ao vivo na última edição" loading="lazy"><div class="live-badge"><span class="pulse"></span>Ao vivo</div></div>
+        <div class="wbody">
+          <div class="wtop">
+            <span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="wlbl gold">É assim no 3Injectors Congress</span>
+          </div>
+          <h3>Ver alguém fazendo na sua frente</h3>
+          <p>O procedimento ao vivo, com <strong>cada movimento explicado enquanto é feito.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section class="acervo pad" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-anim="fade">Como funciona</span>
+      <div class="top">
+        <h2 class="d2" data-anim style="--d:80ms">Dois dias de injeção<br>ao <span class="gold">vivo</span></h2>
+      </div>
+      <div class="rule" data-rule></div>
+    </div>
+    <div class="pgrid3">
+      <article class="pcard" data-anim style="--d:0ms">
+        <div class="pfig"><img src="img/pill-1.webp" alt="Injeção ao vivo na última edição" loading="lazy"><span class="pnum">01</span></div>
+        <div class="pbody">
+          <h3>Injeção ao vivo, do começo ao fim</h3>
+          <p>Três dos maiores dermatologistas do país <strong>injetam ao vivo durante os dois dias</strong>. Você acompanha cada procedimento <strong>em tempo real</strong>: a avaliação do paciente, a escolha da técnica, o posicionamento da agulha, a quantidade de produto e os ajustes durante a aplicação.</p>
+        </div>
+      </article>
+      <article class="pcard" data-anim style="--d:110ms">
+        <div class="pfig"><img src="img/pill-2.webp" alt="Dr. Daniel Coimbra explicando um procedimento no palco" loading="lazy" style="object-position:50% 22%"><span class="pnum">02</span></div>
+        <div class="pbody">
+          <h3>O raciocínio explicado na hora</h3>
+          <p><strong>Cada decisão clínica é explicada no momento em que acontece</strong>: o ponto de entrada, a profundidade, onde pausar e onde seguir. Eles levaram anos para construir esse raciocínio e vão mostrar como ele funciona enquanto aplicam.</p>
+        </div>
+      </article>
+      <article class="pcard" data-anim style="--d:220ms">
+        <div class="pfig"><img src="img/pill-3.webp" alt="Procedimento projetado no telão para a plateia" loading="lazy"><span class="pnum">03</span></div>
+        <div class="pbody">
+          <h3>Mais de 30 procedimentos em dois dias</h3>
+          <p>Você sai de São Paulo tendo visto mais aplicações ao vivo do que <strong>a maioria dos médicos vê em anos de prática</strong>.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUEM PODE PARTICIPAR ================= -->
+<section class="whosec pad" id="quem-participa">
+  <div class="secbg"><img src="img/bg-plateia.webp" alt="" class="px"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-anim="fade">Exclusivo para médicos</span>
+    <h2 class="d2" data-anim style="--d:80ms;margin-top:20px">Quem pode participar?</h2>
+    <div class="chips" data-anim style="--d:160ms">
+      <span class="chip">Médicos especialistas</span>
+      <span class="chip">Médicos residentes</span>
+      <span class="chip">Médicos pós-graduandos</span>
+    </div>
+    <p class="lead" data-anim style="--d:240ms">Que querem aprender injetáveis com os <strong>grandes nomes da dermatologia no Brasil</strong>.</p>
+    <div class="btn-row" data-anim style="--d:320ms"><a href="#inscricao" class="btn lg">Quero garantir minha vaga</a></div>
+  </div>
+</section>
+
+<!-- ================= ANTES E DEPOIS ================= -->
+<section class="compare pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-anim="fade">O que muda quando você aprende assim</span>
+      <div class="top">
+        <h2 class="d2" data-anim style="--d:80ms">Antes e depois do<br><span class="gold">3Injectors Congress</span></h2>
+      </div>
+      <div class="rule" data-rule></div>
+    </div>
+    <div class="cgrid">
+      <div class="col old" data-anim="left">
+        <h3>Como é hoje</h3>
+        <ul class="clist">
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span><span class="lt">Você estuda técnica em artigo e em vídeo editado</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span><span class="lt">Tenta reproduzir a partir de descrições</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span><span class="lt">Descobre as dúvidas só na hora de aplicar</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span><span class="lt">Aprende sozinho, na tentativa e erro</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span><span class="lt">Tem pouco acesso às grandes referências</span></li>
+        </ul>
+      </div>
+      <div class="col new" data-anim="right" style="--d:120ms">
+        <h3>Depois do <span class="gold">3Injectors</span></h3>
+        <ul class="clist">
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Você viu a técnica acontecer <strong>ao vivo, sem cortes</strong></span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Observou <strong>de perto</strong> o movimento de quem já domina</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt"><strong>Tirou as dúvidas</strong> antes de voltar ao consultório</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt"><strong>Encurtou em dois dias</strong> uma curva de aprendizado que costuma levar anos</span></li>
+          <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Teve <strong>contato direto</strong> com quem está no topo da área</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRÊS RAZÕES ================= -->
+<section class="steps pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-anim="fade">Por que ir</span>
+      <div class="top"><h2 class="d2" data-anim style="--d:80ms">Três razões<br>para estar lá</h2></div>
+    </div>
+    <div class="slist" id="slist">
+      <div class="srail"><i id="srailfill"></i></div>
+      <div class="step" data-step><div class="sdot"><b>01</b></div>
+        <div><h3>Diversificação da prática médica</h3><p>São dois dias de injeção ao vivo com três especialistas, <strong>cada um mostrando a própria técnica por inteiro</strong>. Você volta com mais opções para oferecer no consultório.</p></div></div>
+      <div class="step" data-step><div class="sdot"><b>02</b></div>
+        <div><h3>Atualização com quem está na vanguarda</h3><p>Aprender com referências da cosmiatria mundial ajuda você a ter <strong>resultados mais consistentes</strong> com injetáveis. Você vê o que funciona hoje, demonstrado por quem testa e refina essas técnicas todos os dias.</p></div></div>
+      <div class="step" data-step><div class="sdot"><b>03</b></div>
+        <div><h3>Área com demanda crescente</h3><p>Quem domina esse tipo de tratamento está <strong>um passo à frente</strong>. Em junho, você dá esse passo assistindo quem já chegou lá.</p></div></div>
+    </div>
+    <div class="btn-row" data-anim style="margin-top:clamp(40px,6vh,64px)"><a href="#inscricao" class="btn lg">Quero garantir minha vaga</a></div>
+  </div>
+</section>
+
+<!-- ================= ANFITRIÕES ================= -->
+<section class="hosts pad" id="anfitrioes">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;justify-items:center">
+      <span class="eyebrow" data-anim="fade">Anfitriões</span>
+      <h2 class="d2" data-anim style="--d:80ms">Conheça seus <span class="gold">anfitriões</span></h2>
+      <p class="lead" data-anim style="--d:180ms;margin-inline:auto;text-align:center">Os três <strong>injetam ao vivo durante os dois dias</strong> do congresso.</p>
+    </div>
+  </div>
+  <div class="host-list">
+    <article class="host">
+      <figure class="host-main"><img src="img/dr-braz.webp" alt="Dr.&nbsp;André Braz"></figure>
+      <div class="host-info">
+        <h3 class="host-name" data-anim style="--d:80ms"><i>Dr.</i>&nbsp;André Braz</h3>
+        
+        <ul class="hlist" data-anim style="--d:160ms"><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Autor do atlas best-seller <strong>"Dermal Fillers: Facial Anatomy and Injection Techniques"</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Autor de <strong>inúmeros artigos científicos</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Coordenador científico do <strong>MARC (Miami, EUA) por 11 anos</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Coordenador científico do <strong>SCT (Singapura) por 7 anos</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Coordenador de cursos de anatomia aplicada a injetáveis no <strong>IRCAD e no ITC</strong>, no Brasil</span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Membro da <strong>SBCD</strong>, da <strong>SBD</strong> e das entidades americanas <strong>AAD e ASDS</strong></span></li></ul>
+        <div class="tags" data-anim="fade" style="--d:240ms"><span class="tag">Atlas best-seller</span><span class="tag">MARC · SCT</span><span class="tag">AAD · ASDS</span></div>
+      </div>
+      <div class="host-thumbs" data-anim="fade" aria-label="Dr. André Braz injetando ao vivo na última edição"><img src="img/hosts/braz-1.webp" alt="" loading="lazy"><img src="img/hosts/braz-2.webp" alt="" loading="lazy"><img src="img/hosts/braz-3.webp" alt="" loading="lazy"><img src="img/hosts/braz-4.webp" alt="" loading="lazy"><img src="img/hosts/braz-5.webp" alt="" loading="lazy"><img src="img/hosts/braz-6.webp" alt="" loading="lazy"></div>
+    </article>
+    <article class="host">
+      <figure class="host-main"><img src="img/dr-bravo.webp" alt="Dra.&nbsp;Bruna Bravo"></figure>
+      <div class="host-info">
+        <h3 class="host-name" data-anim style="--d:80ms"><i>Dra.</i>&nbsp;Bruna Bravo</h3>
+        <div class="host-rqe">RQE 34845</div>
+        <ul class="hlist" data-anim style="--d:160ms"><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Dermatologista especialista pela <strong>SBD e SBCD</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Pós-graduada em Clinical Trial and Research pela <strong>Harvard Medical School</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span><strong>Mestre em medicina</strong> pela UFRJ</span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span><strong>Consultora médica</strong> de Allergan, Galderma, Merz, L'Oréal, NAOS, Avène e Entera</span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Autora de <strong>artigos científicos e capítulos de livros</strong> em cosmiatria</span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Criadora da técnica <strong>Matemática da Beleza</strong></span></li></ul>
+        <div class="tags" data-anim="fade" style="--d:240ms"><span class="tag">Harvard Medical School</span><span class="tag">UFRJ</span><span class="tag">Matemática da Beleza</span></div>
+      </div>
+      <div class="host-thumbs" data-anim="fade" aria-label="Dra. Bruna Bravo injetando ao vivo na última edição"><img src="img/hosts/bravo-1.webp" alt="" loading="lazy"><img src="img/hosts/bravo-2.webp" alt="" loading="lazy"><img src="img/hosts/bravo-3.webp" alt="" loading="lazy"><img src="img/hosts/bravo-4.webp" alt="" loading="lazy"><img src="img/hosts/bravo-5.webp" alt="" loading="lazy"><img src="img/hosts/bravo-6.webp" alt="" loading="lazy"></div>
+    </article>
+    <article class="host">
+      <figure class="host-main"><img src="img/dr-coimbra.webp" alt="Dr.&nbsp;Daniel Coimbra"></figure>
+      <div class="host-info">
+        <h3 class="host-name" data-anim style="--d:80ms"><i>Dr.</i>&nbsp;Daniel Coimbra</h3>
+        <div class="host-rqe">RQE 20413</div>
+        <ul class="hlist" data-anim style="--d:160ms"><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Dermatologista, especialista pela <strong>Sociedade Brasileira de Dermatologia (SBD)</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Mestre pelo <strong>INI-Fiocruz</strong>, no Rio de Janeiro</span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Ênfase em <strong>toxina botulínica, preenchedores de ácido hialurônico e bioestimuladores de colágeno</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Criador do <strong>Lifting Tridimensional Dinâmico</strong></span></li><li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span><strong>Pioneiro na literatura mundial</strong> no tratamento da região temporal superior</span></li></ul>
+        <div class="tags" data-anim="fade" style="--d:240ms"><span class="tag">INI-Fiocruz</span><span class="tag">Lifting 3D Dinâmico</span><span class="tag">Região temporal</span></div>
+      </div>
+      <div class="host-thumbs" data-anim="fade" aria-label="Dr. Daniel Coimbra injetando ao vivo na última edição"><img src="img/hosts/coimbra-1.webp" alt="" loading="lazy"><img src="img/hosts/coimbra-2.webp" alt="" loading="lazy"><img src="img/hosts/coimbra-3.webp" alt="" loading="lazy"><img src="img/hosts/coimbra-4.webp" alt="" loading="lazy"><img src="img/hosts/coimbra-5.webp" alt="" loading="lazy"><img src="img/hosts/coimbra-6.webp" alt="" loading="lazy"></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= PROVA SOCIAL + VAGAS ================= -->
+<section class="proof pad">
+  <div class="secbg faint"><img src="img/ed-d1-163.webp" alt="" class="px"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-anim="fade">Em números</span>
+      <div class="top">
+        <h2 class="d2" data-anim style="--d:80ms;max-width:20ch">Na última edição, mais de 850 médicos acompanharam os procedimentos <span class="gold">ao vivo.</span></h2>
+      </div>
+      <div class="rule" data-rule></div>
+    </div>
+    <div class="stats">
+      <div class="stat" data-anim style="--d:0ms"><div class="n" data-count="850" data-suffix="+">0</div><div class="t">Médicos na última edição</div></div>
+      <div class="stat" data-anim style="--d:90ms"><div class="n" data-count="30">0</div><div class="t">Procedimentos ao vivo na última edição</div></div>
+      <div class="stat" data-anim style="--d:180ms"><div class="n" data-count="3000" data-suffix="+">0</div><div class="t">Médicos somando todas as edições</div></div>
+    </div>
+    <div class="seats" data-anim style="--d:120ms">
+      <div class="big">650<small>vagas em 2027</small></div>
+      <div class="txt">
+        <h3>200 vagas a menos que na edição anterior.</h3>
+        <p>Reduzimos as vagas para ter:</p>
+        <ul class="seat-why">
+          <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span>Uma experiência <strong>mais intimista e próxima</strong></span></li>
+          <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span><strong>Mais networking</strong> e troca de ideias entre médicos e anfitriões</span></li>
+          <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg><span><strong>Mais proximidade</strong> do palco</span></li>
+        </ul>
+        <a href="#inscricao" class="btn">Quero garantir minha vaga</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOTOS DA ÚLTIMA EDIÇÃO ================= -->
+<section class="edition pad" id="edicao">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-anim="fade">Última edição</span>
+      <div class="top">
+        <h2 class="d2" data-anim style="--d:80ms">Como foi a<br>última edição</h2>
+        <p class="lead" data-anim style="--d:180ms;max-width:40ch">Mais de 850 médicos e 30 procedimentos feitos ao vivo, em dois dias.</p>
+      </div>
+      <div class="rule" data-rule></div>
+    </div>
+    <div class="gal" id="gal">
+      <figure class="gi xl" data-anim="fade" tabindex="0"><img src="img/ed-d1-163.webp" alt="Plateia da última edição do 3Injectors Congress" loading="lazy"><figcaption>Plateia da última edição</figcaption></figure>
+      <figure class="gi" data-anim="fade" style="--d:80ms" tabindex="0"><img src="img/ed-d1-183.webp" alt="Procedimento ao vivo" loading="lazy"><figcaption>Procedimento ao vivo</figcaption></figure>
+      <figure class="gi" data-anim="fade" style="--d:140ms" tabindex="0"><img src="img/ed-d2-166.webp" alt="Médicos acompanhando da plateia" loading="lazy"><figcaption>Médicos na plateia</figcaption></figure>
+      <figure class="gi w" data-anim="fade" tabindex="0"><img src="img/ed-d2-252.webp" alt="Procedimento projetado no telão" loading="lazy"><figcaption>O procedimento no telão</figcaption></figure>
+      <figure class="gi m" data-anim="fade" style="--d:80ms" tabindex="0"><img src="img/ed-d1-330.webp" alt="Injeção ao vivo" loading="lazy"><figcaption>Injeção ao vivo</figcaption></figure>
+      <figure class="gi m" data-anim="fade" style="--d:140ms" tabindex="0"><img src="img/ed-d1-319.webp" alt="Injeção ao vivo" loading="lazy"><figcaption>Injeção ao vivo</figcaption></figure>
+      <figure class="gi" data-anim="fade" tabindex="0"><img src="img/mq-1.webp" alt="Entrada do 3Injectors Congress" loading="lazy"><figcaption>Bem-vindos</figcaption></figure>
+      <figure class="gi" data-anim="fade" style="--d:80ms" tabindex="0"><img src="img/ed-d1-214.webp" alt="Intervalo entre os procedimentos" loading="lazy"><figcaption>Intervalo</figcaption></figure>
+      <figure class="gi" data-anim="fade" style="--d:140ms" tabindex="0"><img src="img/ed-d2-274.webp" alt="Encerramento da última edição" loading="lazy"><figcaption>Encerramento</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARA QUEM É ================= -->
+<section class="fit pad">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;justify-items:center">
+      <span class="eyebrow" data-anim="fade">Para quem é</span>
+      <h2 class="d2" data-anim style="--d:80ms">O 3Injectors Congress<br>é para você que:</h2>
+    </div>
+    <div class="col new" data-anim>
+      <ul class="clist">
+        <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Quer ver <strong>técnicas avançadas sendo executadas</strong>, e não só descritas</span></li>
+        <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Quer <strong>encurtar a curva de aprendizado</strong> com quem já passou por ela</span></li>
+        <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Valoriza os <strong>detalhes que só aparecem quando se observa de perto</strong>, e que nenhum livro registra</span></li>
+        <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Sabe que estar <strong>na mesma sala que grandes referências</strong> abre portas</span></li>
+        <li><span class="ic"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lt">Está pronto para dedicar <strong>dois dias intensos</strong> à sua evolução técnica</span></li>
+      </ul>
+    </div>
+    <p class="closing" data-anim>Se para você estar perto de quem domina a técnica é o caminho mais inteligente, <span class="gold">seja bem-vindo.</span></p>
+  </div>
+</section>
+
+<!-- ================= INSCRIÇÃO ================= -->
+<section class="insc pad" id="inscricao">
+  <div class="secbg faint"><img src="img/bg-stage.webp" alt="" class="px"></div>
+  <div class="wrap">
+    <div class="sec-head insc-head" style="text-align:center;justify-items:center">
+      <span class="eyebrow" data-anim="fade">Inscrições 2027</span>
+      <h2 class="d2" data-anim style="--d:80ms">Garanta sua vaga no <span class="gold">3Injectors Congress 2027</span></h2>
+    </div>
+    <div class="insc-grid">
+      <div class="insc-photo" data-anim="scale">
+        <img src="img/insc-trio.webp" alt="Os três anfitriões no túnel de entrada da última edição" loading="lazy">
+        <div class="live-badge"><span class="pulse"></span>Inscrições abertas</div>
+      </div>
+      <div class="insc-copy">
+        <div class="ticket" data-anim style="--d:160ms">
+          <div class="t-head">
+            <span class="t-lbl">Inscrição</span>
+            <div class="t-price">R$ 3.000</div>
+            <div class="t-inst">em até 12x no cartão · todos os cartões aceitos</div>
+          </div>
+          <ul class="plist">
+            <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg>11 e 12 de junho de 2027, em São Paulo</li>
+            <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg>Dois dias inteiros de evento presencial</li>
+            <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg>Mais de 30 procedimentos ao vivo com Dr.&nbsp;André&nbsp;Braz, Dra.&nbsp;Bruna&nbsp;Bravo e Dr.&nbsp;Daniel&nbsp;Coimbra</li>
+            <li><svg viewBox="0 0 16 16"><path d="M2 8.5l3.5 3.5L14 4"/></svg>650 vagas, 200 a menos que na edição anterior</li>
+          </ul>
+          <!-- TROCAR: link de compra em main.js (PURCHASE_URL) -->
+          <a href="#" class="btn lg" id="buyBtn">Quero garantir minha vaga</a>
+          <img src="img/bandeiras.png" alt="Bandeiras de cartão aceitas" class="flags">
+          <p class="t-note">Evento exclusivo para médicos. Sem transmissão online.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq pad" id="faq">
+  <div class="wrap" style="max-width:960px">
+    <div class="sec-head">
+      <span class="eyebrow" data-anim="fade">Informações importantes</span>
+      <div class="top"><h2 class="d2" data-anim style="--d:80ms">Antes de se inscrever</h2></div>
+      <div class="rule" data-rule></div>
+    </div>
+    <div id="faqlist">
+      <div class="fitem"><button class="fq">Qual é o valor da inscrição?<span class="pm"></span></button>
+        <div class="fa"><div class="in"><strong>R$ 3.000</strong>, que podem ser parcelados <strong>em até 12x no cartão</strong>. Todos os cartões são aceitos.</div></div></div>
+      <div class="fitem"><button class="fq">O evento terá transmissão online?<span class="pm"></span></button>
+        <div class="fa"><div class="in">Não. O 3Injectors Congress é <strong>100% presencial</strong> e as vagas são limitadas. O que se aprende assistindo ao vivo não se traduz em tela: a proximidade, os detalhes, a pergunta feita na hora certa. Por isso não haverá transmissão. Quem estiver lá, estará lá de verdade.</div></div></div>
+      <div class="fitem"><button class="fq">Quem pode participar?<span class="pm"></span></button>
+        <div class="fa"><div class="in">Médicos especialistas, residentes e pós-graduandos. O evento é exclusivo para médicos.</div></div></div>
+      <div class="fitem"><button class="fq">Quantas vagas terá esta edição?<span class="pm"></span></button>
+        <div class="fa"><div class="in"><strong>650 vagas</strong>, 200 a menos que na edição anterior. A redução é para ter uma experiência <strong>mais intimista e próxima</strong>, <strong>mais networking</strong> e troca de ideias entre médicos e anfitriões, e <strong>mais proximidade do palco</strong>.</div></div></div>
+      <div class="fitem"><button class="fq">Quando e onde acontece?<span class="pm"></span></button>
+        <div class="fa"><div class="in">Nos dias 11 e 12 de junho de 2027, em São Paulo. São dois dias inteiros de evento presencial.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FECHAMENTO ================= -->
+<section class="close">
+  <div class="bgimg"><img src="img/hero.webp" alt="" id="closeImg"></div>
+  <div class="wrap">
+    <h2 class="d1" data-anim style="--d:80ms">Junho, em São Paulo.<br><span class="gold">650 vagas.</span></h2>
+    <p class="lead" data-anim style="--d:180ms">Dois dias assistindo Dr.&nbsp;André&nbsp;Braz, Dra.&nbsp;Bruna&nbsp;Bravo e Dr.&nbsp;Daniel&nbsp;Coimbra <strong>injetarem ao vivo</strong>.</p>
+    <div class="btn-row" data-anim style="--d:280ms"><a href="#inscricao" class="btn lg">Quero garantir minha vaga</a></div>
+    <div class="foot-strip" data-anim="fade" style="--d:380ms">
+      <span>11 e 12 de junho de 2027</span><span>R$ 3.000 em até 12x</span><span>100% presencial</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="logo-stack" style="align-items:flex-start">
+        <span class="logo" style="font-size:26px"><i>3</i>injectors</span>
+        <span class="logo-sub" style="font-size:8px">congress</span>
+      </div>
+      <nav class="fnav">
+        <a href="#como-funciona">Como funciona</a><a href="#quem-participa">Quem pode participar</a>
+        <a href="#anfitrioes">Anfitriões</a><a href="#edicao">Última edição</a><a href="#inscricao">Inscrição</a>
+      </nav>
+    </div>
+    <div class="fbot">
+      <span>© 2027 3Injectors Congress. Evento exclusivo para médicos.</span>
+      <span><a href="#">Política de reembolso e devoluções</a> · <a href="#">Política de privacidade</a></span>
+    </div>
+  </div>
+</footer>
+
+</div></div>
+
+<!-- lightbox -->
+<div class="lb" id="lb" aria-hidden="true">
+  <button class="x" aria-label="Fechar">&times;</button>
+  <button class="pv" aria-label="Foto anterior">&#8249;</button>
+  <button class="nx" aria-label="Próxima foto">&#8250;</button>
+  <div><img src="" alt=""><div class="cap"></div></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
